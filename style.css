@@ -1,0 +1,240 @@
+/* ==========================================
+   1. RESET Y CONFIGURACIÓN GENERAL
+   ========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* ==========================================
+   2. BANNER PRINCIPAL (CONTENEDOR RESPONSIVO)
+   ========================================== */
+.hero-banner {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    border-bottom: 5px solid #002b4d;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    background-color: #00bfff; /* Fondo de respaldo por seguridad */
+}
+
+/* Imagen real dentro del HTML para adaptabilidad total sin recortes */
+.hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Contenedor absoluto para superponer el botón de descarga exactamente sobre la imagen */
+.hero-content {
+    position: absolute;
+    bottom: 6%; /* Ubicación porcentual proporcional para cualquier pantalla */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+}
+
+/* Estilo responsivo y adaptable del botón de descarga principal */
+.btn-descargar-hero {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: white;
+    padding: 8px 22px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 35px;
+    box-shadow: 0 4px 15px rgba(39, 174, 96, 0.6);
+    transition: all 0.3s ease;
+    display: inline-block;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+.btn-descargar-hero:hover {
+    background: linear-gradient(135deg, #27ae60, #219653);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(39, 174, 96, 0.8);
+}
+
+/* ==========================================
+   3. SECCIONES DE INFORMACIÓN Y CONTENIDO
+   ========================================== */
+.info-container {
+    max-width: 950px;
+    width: 92%;
+    margin: 40px auto;
+    padding: 35px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.info-container h2 {
+    color: #004080;
+    margin-top: 0;
+}
+
+.ods-box {
+    background: #eaf4ff;
+    padding: 20px;
+    border-left: 5px solid #0066cc;
+    margin-top: 20px;
+    border-radius: 6px;
+}
+
+.ods-box ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.ods-box li {
+    margin-bottom: 8px;
+}
+
+.section-game {
+    max-width: 950px;
+    width: 92%;
+    margin: 30px auto;
+    padding: 35px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    flex-wrap: wrap;
+}
+
+.content-text {
+    flex: 1;
+    min-width: 260px;
+}
+
+.content-text h2 {
+    color: #004080;
+    margin-top: 0;
+    font-size: 1.6rem;
+}
+
+.content-text p {
+    line-height: 1.6;
+    color: #555;
+}
+
+.content-image {
+    flex: 1;
+    min-width: 260px;
+    text-align: center;
+}
+
+.content-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #e1e8ed;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.section-container-multi {
+    max-width: 950px;
+    width: 92%;
+    margin: 30px auto;
+    padding: 35px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+.section-container-multi h2 {
+    color: #004080;
+    margin-top: 0;
+    font-size: 1.6rem;
+}
+
+.section-subtitle {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.grid-subsecciones {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.sub-card {
+    flex: 1;
+    min-width: 260px;
+    background: #fdfefe;
+    border: 1px solid #e1e8ed;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
+.sub-card h3 {
+    color: #004080;
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.sub-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+    margin: 10px 0;
+}
+
+.sub-card p {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ==========================================
+   4. PIE DE PÁGINA
+   ========================================== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #002244;
+    color: white;
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   5. RESPONSIVIDAD PARA CELULARES Y TABLETS
+   ========================================== */
+@media (max-width: 768px) {
+    .btn-descargar-hero {
+        padding: 5px 12px;
+        font-size: 0.7rem;
+    }
+
+    .section-game {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .info-container, 
+    .section-container-multi {
+        padding: 20px;
+    }
+}
